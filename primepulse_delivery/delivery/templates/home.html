@@ -1,0 +1,22 @@
+<!-- primepulse_delivery/core/templates/order_form.html -->
+
+{% extends './base.html' %}
+
+{% block title %}Order - PrimePulse Delivery{% endblock %}
+
+{% block content %}
+    <h1>Place Your Order</h1>
+    <form method="post" action="{% url 'order-list-create' %}">
+        {% csrf_token %}
+        <!-- Add form fields based on your Order model -->
+        <label for="order_number">Order Number:</label>
+        <input type="text" name="order_number" required><br>
+
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" name="customer_name" required><br>
+
+        <!-- Add more form fields as needed -->
+
+        <button type="submit">Submit Order</button>
+    </form>
+{% endblock %}

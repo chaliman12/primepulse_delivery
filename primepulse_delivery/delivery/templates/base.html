@@ -1,0 +1,16 @@
+<!-- primepulse_delivery/core/templates/home.html -->
+
+{% block title %}Home - PrimePulse Delivery{% endblock %}
+
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'order-form' %}">Order</a></li>
+        <!-- Add more navigation links as needed -->
+    </ul>
+</nav>
+
+    <h1>Welcome to PrimePulse Delivery!</h1>
+    <p>Explore our services and place your orders.</p>
+{% endblock %}
